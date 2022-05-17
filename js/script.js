@@ -239,24 +239,53 @@
 
 
 // 25 lesson
-function first() {
-    setTimeout(function() {
-        console.log(1);
-    }, 10);
+// function first() {
+//     setTimeout(function() {
+//         console.log(1);
+//     }, 10);
+// }
+
+// function second() {
+//     console.log(2);
+// }
+
+// first();
+// second();
+
+// function learnJS(lang, callback) {
+//     setTimeout(function() {
+//         console.log(`Я учу: ${lang}`);
+//     }, 500);
+//     callback();
+// }
+// function done() {
+//     console.log('Я прошёл этот урок!');
+// }
+
+// learnJS('JS', done);
+
+// 26 lesson
+
+const options = {
+    name: 'test',
+    width: '1024',
+    height: '1024',
+    colors: {
+        border: 'black',
+        backgroung: 'red'
+    }
+};
+
+let counter = 0;
+for (let key in options) {
+    counter++;
+    if (typeof(options[key]) === 'object'){
+        for (let jkey in options[key]){
+            console.log(`Svoistvo ${jkey} imeet znachenie ${options[key][jkey]}`);
+        }
+    } else {
+        console.log(`Svoistvo ${key} imeet znachenie ${options[key]}`);
+    }
 }
 
-function second() {
-    console.log(2);
-}
-
-first();
-second();
-
-function learnJS(lang, callback) {
-    console.log(`Я учу: ${lang}`);
-    callback();
-}
-
-learnJS('JS', function() {
-    console.log('Я прошёл этот урок!');
-});
+console.log(counter); //Количество свойст в объекте
