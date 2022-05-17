@@ -301,36 +301,106 @@
 
 
 // 27 lesson
-const arr = [1, 40, 67, 28, 49, 10, 13, 26, 2];
+// const arr = [1, 40, 67, 28, 49, 10, 13, 26, 2];
 
-arr.sort(compareNum);
-console.log(arr);
+// arr.sort(compareNum);
+// console.log(arr);
 
-function compareNum(a, b){
-    return a - b;
+// function compareNum(a, b){
+//     return a - b;
+// }
+
+// arr.forEach(function(item, i, arr){
+//     console.log(`${i}: ${item} внутри массива ${arr}`);
+// });
+
+// arr.shift();
+// arr.pop();
+// arr.push(10);
+
+// console.log(arr);
+
+// for (let i = 0; i < arr.length; i++) {
+//     console.log(arr[i]);
+// }
+
+// for (let i of arr) {
+//     console.log(i);
+// }
+
+// const str = 'Bom, Am, Shock';
+// const products = str.split(", ");
+// products.sort();
+// console.log(products.join('; '));
+
+
+// 28 lesson
+let a = 5,
+    b = a;
+
+b = b + 5;
+
+console.log(b);
+console.log(a);
+
+const obj = {
+    a: 5,
+    b: 1
+};
+
+const copyOfObj = obj; //Ссылка на объект
+
+
+function copy(mainObject){
+    let objCopy = {};
+    let key;
+
+    for (key in mainObject) {
+        objCopy[key] = mainObject[key];
+    }
+    return objCopy;
 }
 
-arr.forEach(function(item, i, arr){
-    console.log(`${i}: ${item} внутри массива ${arr}`);
-});
+const num = {
+    first: 10,
+    second: 20,
+    third: 30
+};
 
-arr.shift();
-arr.pop();
-arr.push(10);
+const newNum = copy(num);
 
-console.log(arr);
+console.log(newNum);
 
-for (let i = 0; i < arr.length; i++) {
-    console.log(arr[i]);
+const add = {
+    d: 17,
+    e: 20
+};
+
+const clone = Object.assign({}, add);
+
+clone.d = 20;
+
+console.log(clone);
+console.log(add);
+
+const oldArr = [1, 2, 3];
+const newArr = oldArr.slice();
+newArr[1] = 123;
+console.log(oldArr, newArr);
+
+const video = ['youtube', 'video', 'rutube'],
+      blogs = ['wordpress', 'livejournal', 'blogger'],
+      internet = [...video, ...blogs, 'facebook', 'telegram']; //Слияние массивов
+
+console.log(internet);
+
+function log(a, b, c) {
+    console.log(a);
+    console.log(b);
+    console.log(c);
 }
 
-for (let i of arr) {
-    console.log(i);
-}
-
-const str = 'Bom, Am, Shock';
-const products = str.split(", ");
-products.sort();
-console.log(products.join('; '));
+const logArr = [2, 5, 7];
+log(...logArr);
 
 
