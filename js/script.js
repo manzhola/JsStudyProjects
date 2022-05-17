@@ -266,26 +266,71 @@
 
 // 26 lesson
 
-const options = {
-    name: 'test',
-    width: '1024',
-    height: '1024',
-    colors: {
-        border: 'black',
-        backgroung: 'red'
-    }
-};
+// const options = {
+//     name: 'test',
+//     width: '1024',
+//     height: '1024',
+//     colors: {
+//         border: 'black',
+//         backgroung: 'red'
+//     },
+//     makeTest: function() {
+//         console.log('Test');
+//     } //Создание своего метода
+// };
 
-let counter = 0;
-for (let key in options) {
-    counter++;
-    if (typeof(options[key]) === 'object'){
-        for (let jkey in options[key]){
-            console.log(`Svoistvo ${jkey} imeet znachenie ${options[key][jkey]}`);
-        }
-    } else {
-        console.log(`Svoistvo ${key} imeet znachenie ${options[key]}`);
-    }
+// options.makeTest();
+// console.log(Object.keys(options).length);
+
+// const {border, bg} = options.colors;
+// console.log(border);
+
+// let counter = 0;
+// for (let key in options) {
+//     counter++;
+//     if (typeof(options[key]) === 'object'){
+//         for (let jkey in options[key]){
+//             console.log(`Svoistvo ${jkey} imeet znachenie ${options[key][jkey]}`);
+//         }
+//     } else {
+//         console.log(`Svoistvo ${key} imeet znachenie ${options[key]}`);
+//     }
+// }
+
+// console.log(counter); //Количество свойст в объекте
+
+
+// 27 lesson
+const arr = [1, 40, 67, 28, 49, 10, 13, 26, 2];
+
+arr.sort(compareNum);
+console.log(arr);
+
+function compareNum(a, b){
+    return a - b;
 }
 
-console.log(counter); //Количество свойст в объекте
+arr.forEach(function(item, i, arr){
+    console.log(`${i}: ${item} внутри массива ${arr}`);
+});
+
+arr.shift();
+arr.pop();
+arr.push(10);
+
+console.log(arr);
+
+for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
+}
+
+for (let i of arr) {
+    console.log(i);
+}
+
+const str = 'Bom, Am, Shock';
+const products = str.split(", ");
+products.sort();
+console.log(products.join('; '));
+
+
