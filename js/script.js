@@ -78,22 +78,33 @@
 
 // console.log(`${result}`);
 
-// 18 leson
+// 18 lesson
 
-const movieDB = {
-    movies: {}
-};
+// const movieDB = {
+//     movies: {}
+// };
 
-for (let i = 0; i < 2; i++) {
-    let a = prompt('One of the last film that did you whatch', ''),
-        b = prompt('Please give your mark', '');
-    if (a != null && b != null && a.length < 50 && a != '' && b != ''){
-        movieDB.movies[a] = b;
-        console.log(`done ${i+1} times`);
-    } else {
-        console.log('error');
-        i--;
-    }
+// for (let i = 0; i < 2; i++) {
+//     let a = prompt('One of the last film that did you whatch', ''),
+//         b = prompt('Please give your mark', '');
+//     if (a != null && b != null && a.length < 50 && a != '' && b != ''){
+//         movieDB.movies[a] = b;
+//         console.log(`done ${i+1} times`);
+//     } else {
+//         console.log('error');
+//         i--;
+//     }
+// }
+
+// console.log(movieDB.movies);
+
+//19 lesson
+
+let a = 10;
+
+function showFirstMessage (text) {
+    console.log(text);
+    let num = 20;
 }
 
-console.log(movieDB.movies);
+showFirstMessage(a);
