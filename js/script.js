@@ -134,15 +134,42 @@
 // calculator();
 
 //20 lesson
+// const usdCurr = 30;
+// const eurCurr = 34;
 
-const usdCurr = 30;
-const eurCurr = 34;
+// function convert(curr, amound) {
+//     console.log(curr * amound);
+// }
 
-function convert(curr, amound) {
-    console.log(curr * amound);
-}
+// convert(usdCurr, 500);
+// convert(eurCurr, 500);
 
-convert(usdCurr, 500);
-convert(eurCurr, 500);
 
+//21 lesson
+// const usdCurr = 30,
+//       discount = 0.9;
+
+// function convert(curr, amound) {
+//     return curr * amound;
+// }
+
+// function promotion(result) {
+//     console.log(result * discount);
+// }
+
+// promotion(convert(usdCurr, 500));
+
+// function test () {
+//     for (let i = 0; i < 5; i++) {
+//         console.log(i);
+//         if ( i ==3 ) {
+//             return;
+//         }
+//     }
+//     console.log('Done');
+// }
+// test();
+
+// function doNothing() {}
+// console.log(doNothing() === undefined);
 
