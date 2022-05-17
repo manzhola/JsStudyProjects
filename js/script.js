@@ -176,21 +176,63 @@
 
 
 //22 lesson
-const str = 'test';
-const arr = [1,'43232',4];
+// const str = 'test';
+// const arr = [1,'43232',4];
 
-console.log(arr[1].length);
+// console.log(arr[1].length);
 
-console.log(str.toUpperCase());
-const fruit = 'Some fruit';
-console.log(fruit.indexOf("q"));
+// console.log(str.toUpperCase());
+// const fruit = 'Some fruit';
+// console.log(fruit.indexOf("q"));
 
-const logg = 'Hello World!';
-console.log(logg.slice(0, 5));
-console.log(logg.substring(0, 5));
+// const logg = 'Hello World!';
+// console.log(logg.slice(0, 5));
+// console.log(logg.substring(0, 5));
 
-const a = 13.5;
-console.log(Math.round(a));
+// const a = 13.5;
+// console.log(Math.round(a));
 
-const text = '13.5px';
-console.log(parseInt(text));
+// const text = '13.5px';
+// console.log(parseInt(text));
+// console.log(parseFloat(text));
+
+
+//23 lesson
+// let numberOfFilm;
+
+// function start() {
+//     numberOfFilm = +prompt('How many films did you watch?', '');
+//     while (numberOfFilm == '' || numberOfFilm == null || isNaN(numberOfFilm)){
+//         numberOfFilm = +prompt('How many films did you watch?', '');
+//     }
+// }
+// start();
+
+// const personalfilmDB = {
+//     count: numberOfFilm,
+//     movie: {},
+//     genres: [],
+//     privat: false
+// };
+
+// function showMyDB(isItPrivate){
+//     if (!isItPrivate) {
+//         console.log(personalfilmDB);
+//     } else {
+//         console.log('This DB is private');
+//     }
+// }
+// showMyDB(personalfilmDB.privat);
+
+
+// function writeYourGenres() {
+//     for (let i = 0; i < 3; i++) {
+//         personalfilmDB.genres[i] = prompt(`Your favourite janr on number ${i+1}`, '');
+//     }
+// }
+// writeYourGenres();
+
+
+// 24 lesson
+let a = ("    Hello    ").trim(); // Убирает все пробелы
+console.log(a);
