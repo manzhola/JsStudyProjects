@@ -1,3 +1,4 @@
+'use strict';
 // let numberOfFilms = +prompt('How many films did you whatch?', ''); 
 
 // const personalMovieDB = {
@@ -173,3 +174,23 @@
 // function doNothing() {}
 // console.log(doNothing() === undefined);
 
+
+//22 lesson
+const str = 'test';
+const arr = [1,'43232',4];
+
+console.log(arr[1].length);
+
+console.log(str.toUpperCase());
+const fruit = 'Some fruit';
+console.log(fruit.indexOf("q"));
+
+const logg = 'Hello World!';
+console.log(logg.slice(0, 5));
+console.log(logg.substring(0, 5));
+
+const a = 13.5;
+console.log(Math.round(a));
+
+const text = '13.5px';
+console.log(parseInt(text));
