@@ -100,11 +100,49 @@
 
 //19 lesson
 
-let a = 10;
+// let a = 10;
 
-function showFirstMessage (text) {
-    console.log(text);
-    let num = 20;
+// function showFirstMessage (text) {
+//     console.log(text);
+//     let num = 20; 
+// }
+// showFirstMessage(a);
+
+
+// function calc(a, b){
+//     return (a + b);
+// }
+// console.log(calc(4, 6));
+
+// function ret() {  //Можно вызвать до создания/написания функции
+//     let num = 50;
+//     return num;
+// }
+// console.log(ret);
+
+// let foo = function() { //Можно вызвать только после объявления
+//     console.log('hello');
+// };
+
+// foo();
+
+
+// const calculator = (a, b) => {
+//     return a + b;
+// };
+
+// calculator();
+
+//20 lesson
+
+const usdCurr = 30;
+const eurCurr = 34;
+
+function convert(curr, amound) {
+    console.log(curr * amound);
 }
 
-showFirstMessage(a);
+convert(usdCurr, 500);
+convert(eurCurr, 500);
+
+
