@@ -234,5 +234,29 @@
 
 
 // 24 lesson
-let a = ("    Hello    ").trim(); // Убирает все пробелы
-console.log(a);
+// let a = ("    Hello    ").trim(); // Убирает все пробелы
+// console.log(a);
+
+
+// 25 lesson
+function first() {
+    setTimeout(function() {
+        console.log(1);
+    }, 10);
+}
+
+function second() {
+    console.log(2);
+}
+
+first();
+second();
+
+function learnJS(lang, callback) {
+    console.log(`Я учу: ${lang}`);
+    callback();
+}
+
+learnJS('JS', function() {
+    console.log('Я прошёл этот урок!');
+});
