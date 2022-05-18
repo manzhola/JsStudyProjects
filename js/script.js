@@ -334,73 +334,184 @@
 // console.log(products.join('; '));
 
 
-// 28 lesson
-let a = 5,
-    b = a;
+// 29 lesson
+// let a = 5,
+//     b = a;
 
-b = b + 5;
+// b = b + 5;
 
-console.log(b);
-console.log(a);
+// console.log(b);
+// console.log(a);
 
-const obj = {
-    a: 5,
-    b: 1
-};
+// const obj = {
+//     a: 5,
+//     b: 1
+// };
 
-const copyOfObj = obj; //Ссылка на объект
+// const copyOfObj = obj; //Ссылка на объект
 
 
-function copy(mainObject){
-    let objCopy = {};
-    let key;
+// function copy(mainObject){
+//     let objCopy = {};
+//     let key;
 
-    for (key in mainObject) {
-        objCopy[key] = mainObject[key];
+//     for (key in mainObject) {
+//         objCopy[key] = mainObject[key];
+//     }
+//     return objCopy;
+// }
+
+// const num = {
+//     first: 10,
+//     second: 20,
+//     third: 30
+// };
+
+// const newNum = copy(num);
+
+// console.log(newNum);
+
+// const add = {
+//     d: 17,
+//     e: 20
+// };
+
+// const clone = Object.assign({}, add);
+
+// clone.d = 20;
+
+// console.log(clone);
+// console.log(add);
+
+// const oldArr = [1, 2, 3];
+// const newArr = oldArr.slice();
+// newArr[1] = 123;
+// console.log(oldArr, newArr);
+
+// const video = ['youtube', 'video', 'rutube'],
+//       blogs = ['wordpress', 'livejournal', 'blogger'],
+//       internet = [...video, ...blogs, 'facebook', 'telegram']; //Слияние массивов
+
+// console.log(internet);
+
+// function log(a, b, c) {
+//     console.log(a);
+//     console.log(b);
+//     console.log(c);
+// }
+
+// const logArr = [2, 5, 7];
+// log(...logArr); // '...' - spread функция
+
+// const array = ['a', 'b'];
+// const newArray = [...array];
+
+// const qobj = {
+//     one: 1,
+//     two: 2
+// };
+// const newQobj = {...qobj};
+
+// 30 lesson
+
+// let str = 'some';
+// let strObj = new String(str);
+
+// // console.log(typeof(str));
+// // console.log(typeof(strObj));
+
+// console.dir([1,2,3]);
+
+// const soldier = {
+//     health: 400,
+//     armor: 100,
+//     sayHello: function(){
+//         console.log('Hello');
+//     }
+// };
+
+// const john = Object.create(soldier);
+// Object.setPrototypeOf(john, soldier);
+
+// john.sayHello();
+
+// 31 lesson
+const personalMovieDB = {
+    count: 0,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false,
+    start: function() {
+        personalMovieDB.count = +prompt('Сколько фильмов вы уже посмотрели?', '');
+    
+        while (personalMovieDB.count == '' || personalMovieDB.count == null || isNaN(personalMovieDB.count)) {
+            personalMovieDB.count = +prompt('Сколько фильмов вы уже посмотрели?', '');
+        }
+    },
+    rememberMyFilms: function() {
+        for (let i = 0; i < 2; i++) {
+            const a = prompt('Один из последних просмотренных фильмов?', ''),
+                  b = prompt('На сколько оцените его?', '');
+        
+            if (a != null && b != null && a != '' && b != '' && a.length < 50) {
+                personalMovieDB.movies[a] = b;
+                console.log('done');
+            } else {
+                console.log('error');
+                i--;
+            }
+        }
+    },
+    detectPersonalLevel: function() {
+        if (personalMovieDB.count < 10) {
+            console.log("Просмотрено довольно мало фильмов");
+        } else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
+            console.log("Вы классический зритель");
+        } else if (personalMovieDB.count >= 30) {
+            console.log("Вы киноман");
+        } else {
+            console.log("Произошла ошибка");
+        }
+    },
+    showMyDB: function(hidden) {
+        if (!hidden) {
+            console.log(personalMovieDB);
+        }
+    },
+    toggleVisibleMyDB: function() {
+        if (personalMovieDB.privat) {
+            personalMovieDB.privat = false;
+        } else {
+            personalMovieDB.privat = true;
+        }
+    },
+    writeYourGenres: function() {
+        for (let i = 1; i < 2; i++) {
+            let genre = prompt(`Ваш любимый жанр под номером ${i}`);
+
+            if (genre === '' || genre == null) {
+                console.log('Вы ввели некорректные данные или не ввели их вовсе');
+                i--;
+            } else {
+                personalMovieDB.genres[i - 1] = genre;
+            } 
+            
+            // Альтернативный вариант из урока
+            
+            // let genres = prompt(`Введите ваши любимые жанры через запятую`).toLowerCase();
+
+            // if (genres === '' || genres == null) {
+            //     console.log('Вы ввели некорректные данные или не ввели их вовсе');
+            //     i--;
+            // } else {
+            //     personalMovieDB.genres = genres.split(', ');
+            //     personalMovieDB.genres.sort();
+            // } 
+        }
+
+        personalMovieDB.genres.forEach((item, i) => {
+            console.log(`Любимый жанр ${i + 1} - это ${item}`);
+        });
     }
-    return objCopy;
-}
-
-const num = {
-    first: 10,
-    second: 20,
-    third: 30
 };
-
-const newNum = copy(num);
-
-console.log(newNum);
-
-const add = {
-    d: 17,
-    e: 20
-};
-
-const clone = Object.assign({}, add);
-
-clone.d = 20;
-
-console.log(clone);
-console.log(add);
-
-const oldArr = [1, 2, 3];
-const newArr = oldArr.slice();
-newArr[1] = 123;
-console.log(oldArr, newArr);
-
-const video = ['youtube', 'video', 'rutube'],
-      blogs = ['wordpress', 'livejournal', 'blogger'],
-      internet = [...video, ...blogs, 'facebook', 'telegram']; //Слияние массивов
-
-console.log(internet);
-
-function log(a, b, c) {
-    console.log(a);
-    console.log(b);
-    console.log(c);
-}
-
-const logArr = [2, 5, 7];
-log(...logArr);
-
-
