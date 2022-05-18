@@ -1,4 +1,5 @@
 'use strict';
+// 15 lesson
 // let numberOfFilms = +prompt('How many films did you whatch?', ''); 
 
 // const personalMovieDB = {
@@ -19,7 +20,7 @@
 
 // console.log(personalMovieDB.movies);
 
-// // 2.
+// // 16 lesson
 
 // if (4 == 9) {
 //     console.log('Ok!');
@@ -54,7 +55,7 @@
 //         break;
 // }
 
-// // 3.
+// // 17 lesson
 
 // first: for (let i = 0; i < 3; i++) {
 //     console.log(`Second level ${i}`);
@@ -568,38 +569,41 @@
 // console.log(typeof(!!"10"));
 
 // 34 lesson
-let number = 5;
+// let number = 5;
 
-const calculator = () => {
-    console.log(number);
-};
+// const calculator = () => {
+//     console.log(number);
+// };
 
-number = 6;
+// number = 6;
 
-calculator(); 
+// calculator(); 
 
-number = 8;
+// number = 8;
 
-calculator();
+// calculator();
 
-const createCounter = () => {
-    let counter = 0;
-    console.log(counter);
+// const createCounter = () => {
+//     let counter = 0;
+//     console.log(counter);
 
-    const myFunction = () => {
-        counter++;
-        return counter;
-    };
-    
-    return myFunction;
-};
+//     const myFunction = () => {
+//         counter++;
+//         return counter;
+//     };
+//     return myFunction;
+// };
 
-const increment = createCounter();
-const c1 = increment();
-const c2 = increment();
-const c3 = increment();
+// const increment = createCounter();
+// const c1 = increment();
+// const c2 = increment();
+// const c3 = increment();
 
-console.log(c1, c2, c3);
+// console.log(c1, c2, c3);
+
+
+//35 lesson
+
 
 
 
