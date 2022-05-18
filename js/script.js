@@ -568,11 +568,38 @@
 // console.log(typeof(!!"10"));
 
 // 34 lesson
+let number = 5;
 
+const calculator = () => {
+    console.log(number);
+};
 
+number = 6;
 
+calculator(); 
 
+number = 8;
 
+calculator();
+
+const createCounter = () => {
+    let counter = 0;
+    console.log(counter);
+
+    const myFunction = () => {
+        counter++;
+        return counter;
+    };
+    
+    return myFunction;
+};
+
+const increment = createCounter();
+const c1 = increment();
+const c2 = increment();
+const c3 = increment();
+
+console.log(c1, c2, c3);
 
 
 
